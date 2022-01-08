@@ -19,14 +19,6 @@ Hash.java
  Hash
  HashTable
  HashTable$LinkedHash
-heapSort.java
- heapSort
-randomizedSelect.java
- randomizedSelect
-myQuickSort.java
- myQuickSort
-stackWithTwoQueuesV1.java
- stackWithTwoQueuesV1
 BST.java
  BST
  binarySearchTree
@@ -34,3 +26,15 @@ BST.java
 rodCuttingProgram.java
  rodCuttingProgram
  rodcutting
+randomizedSelect.java
+ randomizedSelect
+myQuickSort.java
+ myQuickSort
+stackWithTwoQueuesV1.java
+ stackWithTwoQueuesV1
+heapSort.java
+ heapSort
+matrixChainMultiplication.java
+ TwoArrays
+ matrixChainMultiplication
+ matrixChainMultiplicationAlgo
