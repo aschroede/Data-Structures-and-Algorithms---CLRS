@@ -37,4 +37,5 @@ heapSort.java
 matrixChainMultiplication.java
  TwoArrays
  matrixChainMultiplication
- matrixChainMultiplicationAlgo
+ matrixChainMultiplicationClass
+ matrixUtilities

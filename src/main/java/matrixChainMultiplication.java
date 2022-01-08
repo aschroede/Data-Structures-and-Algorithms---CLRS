@@ -1,6 +1,8 @@
-import java.util.Scanner;
+import java.util.Random;
 
+//region Utility Classes
 
+// Utility Class for returning the m and s matrices later
 class TwoArrays{
     public final int[][] A;
     public final int[][] B;
@@ -11,9 +13,50 @@ class TwoArrays{
     }
 }
 
-class matrixChainMultiplicationAlgo {
+// Utility class for generating matrices to test with
+class matrixUtilities {
+    public static int[][][] generateMatrices(int[] p){
 
-    public TwoArrays matrixChainOrder(int[] p){
+        int upperBound = 25;
+        Random randomGen = new Random(10);
+        int numMatrices = p.length-1;
+        int[][][] matrices = new int[numMatrices][][];
+
+        for (int i = 0; i < numMatrices; i++) {
+            int [][] randomMatrix = new int[p[i]][p[i+1]];
+            for (int j = 0; j < randomMatrix.length; j++) {
+                for (int k = 0; k < randomMatrix[0].length; k++) {
+                    randomMatrix[j][k] = randomGen.nextInt(upperBound);
+                }
+            }
+            matrices[i] = randomMatrix;
+        }
+        return matrices;
+    }
+
+    public static void printMatrix(int [][] matrix){
+        for (int i = 0; i < matrix.length; i++) {
+            for (int j = 0; j < matrix[0].length; j++) {
+                System.out.print(matrix[i][j]+"  ");
+            }
+            System.out.println();
+        }
+    }
+}
+//endregion
+
+class matrixChainMultiplicationClass {
+
+    /**
+     * @param p list of dimensions for the matrices to be multiplied.
+     *          For example, for the set of matrices of size 5x4, 4x6, 6x2, 2x7,
+     *          p would be an integer array of length 4 and contain the following values: [5,4,6,2,7]
+     * @return Returns two matrices inside a struct object:
+     * 1) matrix m: stores the minimum number of scalar multiplications needed to compute the matrix A_(i...j).
+     * 2) matrix s: s[i, j] records a value k such that an optimal parenthisization of A_i*A_(i+1)*...*A_j splits the
+     *    product between A_k and A_(k+1)
+     */
+    public TwoArrays generateOptimalParenthesization(int[] p){
         int n = p.length-1;
         int[][] m = new int[n][n];
         int[][] s = new int[n][n];
@@ -40,6 +83,32 @@ class matrixChainMultiplicationAlgo {
         return new TwoArrays(m, s);
     }
 
+    public int[][] matrixMultiplyRecursive(int [][][] A, int [][] s, int i, int j){
+        if (i==j)
+            return A[i];
+
+        if(i+1 == j)
+            return multiplyTwoMatrices(A[i], A[j]);
+
+        return multiplyTwoMatrices(matrixMultiplyRecursive(A, s, i, s[i][j]), matrixMultiplyRecursive(A, s, s[i][j]+1, j));
+    }
+
+    public int [][] multiplyTwoMatrices(int [][] A, int [][] B){
+        if(A[0].length != B.length)
+            System.out.println("Incompatible dimensions");
+
+        int [][] C = new int [A.length][B[0].length];
+        for (int i = 0; i < A.length; i++) {
+            for (int j = 0; j < B[0].length; j++) {
+                C[i][j] = 0;
+                for (int k = 0; k < A[0].length; k++) {
+                    C[i][j] = C[i][j] + A[i][k]*B[k][j];
+                }
+            }
+        }
+        return C;
+    }
+
     public void printOptimalParens(int[][] s, int i, int j){
         if(i==j)
             System.out.print("A"+i);
@@ -56,11 +125,25 @@ public class matrixChainMultiplication{
 
     public static void main(String[] args)
     {
-        int[] p = {30,35,15,5,10,20,25};
-        matrixChainMultiplicationAlgo algo = new matrixChainMultiplicationAlgo();
-        TwoArrays results = algo.matrixChainOrder(p);
-        algo.printOptimalParens(results.B, 0, 5);
+
+        // 1. Generate list of dimensions and store in p
+        int[] dims = {30,35,15,5,10,20,25};
+
+        // 2. Generate some test matrices from p
+        int [][][] randomMatrices = matrixUtilities.generateMatrices(dims);
+
+        // 3. Find optimum way to multiply matrices and store solution in results
+        matrixChainMultiplicationClass algo = new matrixChainMultiplicationClass();
+        TwoArrays results = algo.generateOptimalParenthesization(dims);
+
+        // 4. Multiply the matrices and print the final solution
+        int[][] multipliedMatrices = algo.matrixMultiplyRecursive(randomMatrices, results.B, 0, dims.length-2);
+
+        // 5. Print results
+        algo.printOptimalParens(results.B, 0, dims.length-2);
         System.out.println();
-        System.out.println("Total multiplications: " + results.A[0][5]);
+        System.out.println("Total multiplications: " + results.A[0][dims.length-2]);
+        System.out.println("Final Matrix:");
+        matrixUtilities.printMatrix(multipliedMatrices);
     }
 }
