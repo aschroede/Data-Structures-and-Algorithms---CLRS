@@ -126,8 +126,9 @@ public class matrixChainMultiplication{
     public static void main(String[] args)
     {
 
+        // [5, 4], [4, 6], [6, 2], [2, 7]
         // 1. Generate list of dimensions and store in p
-        int[] dims = {30,35,15,5,10,20,25};
+        int[] dims = {5,4,6,2,7, 9, 23, 435, 112};
 
         // 2. Generate some test matrices from p
         int [][][] randomMatrices = matrixUtilities.generateMatrices(dims);

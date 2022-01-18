@@ -1,3 +1,7 @@
+LCS.java
+ LCS
+ LCSUtility
+ LCSUtility$TwoArrays
 doublyLinkedList.java
  doublyLinkedList
  doublyLinkedList$Node
@@ -7,6 +11,11 @@ myQueue.java
  myQueue
 countingSort.java
  countingSort
+matrixChainMultiplication.java
+ TwoArrays
+ matrixChainMultiplication
+ matrixChainMultiplicationClass
+ matrixUtilities
 stackWithTwoQueuesV2.java
  stackWithTwoQueuesV2
 stackAndQueueProgram.java
@@ -34,8 +43,3 @@ stackWithTwoQueuesV1.java
  stackWithTwoQueuesV1
 heapSort.java
  heapSort
-matrixChainMultiplication.java
- TwoArrays
- matrixChainMultiplication
- matrixChainMultiplicationClass
- matrixUtilities
