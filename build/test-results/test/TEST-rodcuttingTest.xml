@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="rodcuttingTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-12-04T16:05:48" hostname="ENDER" time="0.046">
-  <properties/>
-  <testcase name="Test1()" classname="rodcuttingTest" time="0.046"/>
-  <system-out><![CDATA[Execution time: 1.06060 ms 
-Revenue: 107
-]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>

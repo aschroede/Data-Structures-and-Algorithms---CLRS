@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="hamcrest-1">
+    <CLASSES />
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/../../Program Files/Hamcrest/hamcrest-1.3/hamcrest-core/src/main/java" />
+      <root url="file://$PROJECT_DIR$/../../Program Files/Hamcrest/hamcrest-1.3/hamcrest-examples/src/main/java" />
+      <root url="file://$PROJECT_DIR$/../../Program Files/Hamcrest/hamcrest-1.3/hamcrest-generator/src/main/java" />
+      <root url="file://$PROJECT_DIR$/../../Program Files/Hamcrest/hamcrest-1.3/hamcrest-integration/src/main/java" />
+      <root url="file://$PROJECT_DIR$/../../Program Files/Hamcrest/hamcrest-1.3/hamcrest-library/src/main/java" />
+      <root url="file://$PROJECT_DIR$/../../Program Files/Hamcrest/hamcrest-1.3/hamcrest-unit-test/src/main/java" />
+    </SOURCES>
+  </library>
+</component>
