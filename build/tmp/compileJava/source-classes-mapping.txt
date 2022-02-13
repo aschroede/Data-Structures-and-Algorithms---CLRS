@@ -7,6 +7,8 @@ doublyLinkedList.java
  doublyLinkedList$Node
 maximumSubarray.java
  maximumSubarray
+myQuickSort.java
+ myQuickSort
 myQueue.java
  myQueue
 countingSort.java
@@ -18,6 +20,11 @@ matrixChainMultiplication.java
  matrixUtilities
 stackWithTwoQueuesV2.java
  stackWithTwoQueuesV2
+stackWithTwoQueuesV1.java
+ stackWithTwoQueuesV1
+GraphAlgorithms/graphEnums.java
+ GraphAlgorithms.color
+ GraphAlgorithms.edgeType
 stackAndQueueProgram.java
  stackAndQueueProgram
 queueWithTwoStacks.java
@@ -39,17 +46,15 @@ activitySelector_Greedy.java
  activitySelector_Greedy
 randomizedSelect.java
  randomizedSelect
-myQuickSort.java
- myQuickSort
-stackWithTwoQueuesV1.java
- stackWithTwoQueuesV1
 heapSort.java
  heapSort
-AdjacencyListGraphGenerator.java
- AdjacencyListGraphGenerator
- Vertex
- color
-BFS.java
- BFS
-DFS.java
- DFS
+GraphAlgorithms/AdjacencyListGraph.java
+ GraphAlgorithms.AdjacencyListGraph
+GraphAlgorithms/Vertex.java
+ GraphAlgorithms.Vertex
+GraphAlgorithms/BFS.java
+ GraphAlgorithms.BFS
+GraphAlgorithms/DFS.java
+ GraphAlgorithms.DFS
+GraphAlgorithms/GraphTester.java
+ GraphAlgorithms.GraphTester
