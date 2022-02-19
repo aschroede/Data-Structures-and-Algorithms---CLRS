@@ -1,14 +1,10 @@
 package GraphAlgorithms;
 
-import GraphAlgorithms.Vertex;
-
-import java.util.ArrayList;
 import java.util.PriorityQueue;
-import java.util.Queue;
 
 public class BFS {
 
-    public static void BreadthFirstSearch(AdjacencyListGraph graph, Vertex source){
+    public static void BreadthFirstSearch(UnweightedGraph graph, Vertex source){
         System.out.println("\n ======= BFS ======= ");
 
         for (Vertex v : graph.m_Vertices) {
@@ -29,7 +25,7 @@ public class BFS {
 
             Vertex u = queue.remove();
 
-            for(Vertex v : graph.m_AdjacencyList.get(u.identity)){
+            for(Vertex v : graph.AdjacencyList.get(u.identity)){
                  if(v.color == color.white){
                      v.distance = u.distance+1;
                      v.parent = u;
@@ -41,6 +37,7 @@ public class BFS {
             u.color = color.black;
         }
 
+        System.out.println();
         System.out.println();
     }
 }

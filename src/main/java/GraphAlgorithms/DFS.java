@@ -1,34 +1,41 @@
 package GraphAlgorithms;
-import java.util.ArrayList;
-import java.util.Stack;
+import java.util.*;
 
 public class DFS {
 
     static int time = 0;
 
     // Method 1 - Recursive
-    public static void DepthFirstSearchRecursive(AdjacencyListGraph graph){
+    public static void DepthFirstSearchRecursive(WeightedGraph graph){
 
-        System.out.println(" ======= DFS Recursive ======= ");
+        System.out.println("\n======= DFS Recursive ======= ");
+
+        LinkedList<Vertex> topologicalSorting = new LinkedList<>();
 
         for(Vertex u : graph.m_Vertices){
             u.color = color.white;
             u.parent = null;
         }
 
+        int connectedComponentIndex = 0;
+
         for(Vertex u : graph.m_Vertices){
             if(u.color == color.white){
-                DepthFirstSearchVisit(graph, u);
+                DepthFirstSearchVisit(graph, u, connectedComponentIndex++, topologicalSorting);
             }
         }
-        System.out.println();
-
-        ClassifyEdges(graph);
     }
 
-    private static void ClassifyEdges(AdjacencyListGraph graph) {
+    private static void PrintTopologicalSortOrder(LinkedList<Vertex> topologicalSorting) {
+        System.out.print("Topological sort order: ");
+        for (Vertex v : topologicalSorting){
+            System.out.print(v.identity + "->");
+        }
+    }
+
+    private static void ClassifyAndPrintEdges(UnweightedGraph graph) {
         for(Vertex u : graph.m_Vertices){
-            for(Vertex v : graph.m_AdjacencyList.get(u.identity)){
+            for(Vertex v : graph.AdjacencyList.get(u.identity)){
 
                 System.out.print("Edge " + u.identity + "-" + v.identity + " is a ");
 
@@ -62,19 +69,21 @@ public class DFS {
         }
     }
 
-    private static void DepthFirstSearchVisit(AdjacencyListGraph graph, Vertex u) {
+    private static void DepthFirstSearchVisit(WeightedGraph graph, Vertex u, int connectedComponent, LinkedList<Vertex> topologicalSort) {
 
         u.discoveredTime = ++time;
         u.color = color.gray;
         System.out.print(u.identity + "->");
-        for (Vertex v : graph.m_AdjacencyList.get(u.identity)) {
-            if (v.color == color.white) {
-                v.parent = u;
-                DepthFirstSearchVisit(graph, v);
+        for (Edge e : graph.AdjacencyList.get(u.identity)) {
+            if (e.destination.color == color.white) {
+                e.destination.parent = u;
+                DepthFirstSearchVisit(graph, e.destination, connectedComponent, topologicalSort);
             }
         }
         u.color = color.black;
         u.finishedTime = ++time;
+        u.connectedComponent = connectedComponent;
+        topologicalSort.add(u);
     }
 
     // Method 2 - Stack

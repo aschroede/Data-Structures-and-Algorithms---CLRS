@@ -48,13 +48,23 @@ randomizedSelect.java
  randomizedSelect
 heapSort.java
  heapSort
-GraphAlgorithms/AdjacencyListGraph.java
- GraphAlgorithms.AdjacencyListGraph
 GraphAlgorithms/Vertex.java
  GraphAlgorithms.Vertex
+GraphAlgorithms/UnweightedGraph.java
+ GraphAlgorithms.UnweightedGraph
+GraphAlgorithms/SimplePaths.java
+ GraphAlgorithms.SimplePaths
+GraphAlgorithms/Edge.java
+ GraphAlgorithms.Edge
+GraphAlgorithms/ShortestPathUtilityFunctions.java
+ GraphAlgorithms.ShortestPathUtilityFunctions
 GraphAlgorithms/BFS.java
  GraphAlgorithms.BFS
+GraphAlgorithms/WeightedGraph.java
+ GraphAlgorithms.WeightedGraph
 GraphAlgorithms/DFS.java
  GraphAlgorithms.DFS
 GraphAlgorithms/GraphTester.java
  GraphAlgorithms.GraphTester
+GraphAlgorithms/BellmanFord.java
+ GraphAlgorithms.BellmanFord
