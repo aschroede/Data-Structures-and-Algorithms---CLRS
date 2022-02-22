@@ -1,4 +1,5 @@
-import java.util.List;
+package Algorithms;
+
 import java.util.Scanner;
 
 class rodcutting {

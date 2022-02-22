@@ -1,6 +1,7 @@
+package DataStructures;
+
 import java.util.Random;
 import java.util.Scanner;
-import java.util.concurrent.Callable;
 import java.util.concurrent.ThreadLocalRandom;
 
 class binarySearchTree {
@@ -211,7 +212,7 @@ public class BST{
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
-        System.out.println("***** BST Implementation *****");
+        System.out.println("***** DataStructures.BST Implementation *****");
 
         // create object of hash table
         binarySearchTree BST = new binarySearchTree(1);
@@ -220,8 +221,8 @@ public class BST{
         //  Perform HashTable operations
         while (!exit) {
             System.out.println(
-                    "** BST Operations **");
-            System.out.println("0. Random BST");
+                    "** DataStructures.BST Operations **");
+            System.out.println("0. Random DataStructures.BST");
             System.out.println("1. insert");
             System.out.println("2. delete");
             System.out.println("3. minimum");
@@ -232,12 +233,12 @@ public class BST{
             System.out.println("8. predecessor");
             System.out.println("9. preorder");
             System.out.println("10. postorder");
-            System.out.println("11. Random BST (using recursive insert)");
+            System.out.println("11. Random DataStructures.BST (using recursive insert)");
 
             int choice = sc.nextInt();
             switch (choice) {
                 case 0:
-                    System.out.println("Enter size of BST");
+                    System.out.println("Enter size of DataStructures.BST");
                     BST.random(sc.nextInt(), false);
                     break;
 
@@ -255,13 +256,13 @@ public class BST{
 
                 case 3:
                     System.out.println(
-                            "Minimum node in the BST is : ");
+                            "Minimum node in the DataStructures.BST is : ");
                     System.out.println(BST.minimum(BST.root).key);
                     break;
 
                 case 4:
                     System.out.println(
-                            "Maximum node in the BST is : ");
+                            "Maximum node in the DataStructures.BST is : ");
                     System.out.println(BST.maximum(BST.root).key);
                     break;
 
@@ -320,7 +321,7 @@ public class BST{
                     BST.postOrderRecursivePrint(BST.root);
                     break;
                 case 11:
-                    System.out.println("Enter size of BST");
+                    System.out.println("Enter size of DataStructures.BST");
                     BST.random(sc.nextInt(), true);
                     break;
 

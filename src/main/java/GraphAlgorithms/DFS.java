@@ -6,7 +6,7 @@ public class DFS {
     static int time = 0;
 
     // Method 1 - Recursive
-    public static void DepthFirstSearchRecursive(WeightedGraph graph){
+    public static LinkedList<Vertex> DepthFirstSearchRecursive(WeightedGraph graph, boolean returnTopologicalSort){
 
         System.out.println("\n======= DFS Recursive ======= ");
 
@@ -24,6 +24,10 @@ public class DFS {
                 DepthFirstSearchVisit(graph, u, connectedComponentIndex++, topologicalSorting);
             }
         }
+        if(returnTopologicalSort)
+            return topologicalSorting;
+        else
+            return null;
     }
 
     private static void PrintTopologicalSortOrder(LinkedList<Vertex> topologicalSorting) {
@@ -83,10 +87,10 @@ public class DFS {
         u.color = color.black;
         u.finishedTime = ++time;
         u.connectedComponent = connectedComponent;
-        topologicalSort.add(u);
+        topologicalSort.addFirst(u);
     }
 
-    // Method 2 - Stack
+    // Method 2 - DataStructures.Stack
     public static void DFSStack(ArrayList<ArrayList<Vertex>> graph){
         for (int i = 0; i < graph.size(); i++) {
             for (int j = 0; j < graph.get(i).size(); j++) {

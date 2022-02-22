@@ -1,3 +1,7 @@
+package Algorithms;
+
+import DataStructures.*;
+
 import java.util.Arrays;
 import java.util.Scanner;
 
@@ -10,11 +14,11 @@ public class stackAndQueueProgram {
     public static void main(String[] args){
 
         String dataStructure;
-        myQueue aQueue = new myQueue(5);
+        Queue aQueue = new Queue(5);
         queueWithTwoStacks TwoQueue = new queueWithTwoStacks(5);
         stackWithTwoQueuesV1 TwoStack_V1 = new stackWithTwoQueuesV1(5);
         stackWithTwoQueuesV2 TwoStack_V2 = new stackWithTwoQueuesV2(5);
-        myStack aStack = new myStack(10);
+        Stack aStack = new Stack(10);
         Scanner in = new Scanner(System.in);
 
         System.out.println("Please select data structure: queue, queue2, or stack");

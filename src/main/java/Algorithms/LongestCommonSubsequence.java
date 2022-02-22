@@ -1,3 +1,5 @@
+package Algorithms;
+
 class LCSUtility {
 
     static class TwoArrays{
@@ -82,7 +84,7 @@ class LCSUtility {
     }
 }
 
-public class LCS{
+public class LongestCommonSubsequence{
     public static void main(String[] args) {
 
 //        String[] X = new String[]{"A", "B", "C", "B", "D", "A", "B"};
@@ -100,7 +102,7 @@ public class LCS{
         int returnVal = LCS.LCSLength_TopDown(X, Y, X.length-1, Y.length-1, m);
 
         System.out.println("Longest common subsequence: " + returnVal);
-        //LCS.printLCS_Modified(returnVals.A, X, Y, X.length, Y.length);
+        //Algorithms.LCS.printLCS_Modified(returnVals.A, X, Y, X.length, Y.length);
 
     }
 }

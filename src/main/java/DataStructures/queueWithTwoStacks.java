@@ -1,11 +1,15 @@
+package DataStructures;
+
+import DataStructures.Stack;
+
 public class queueWithTwoStacks {
 
-    private myStack inputStack;
-    private myStack outputStack;
+    private Stack inputStack;
+    private Stack outputStack;
 
     public queueWithTwoStacks(int size){
-        inputStack = new myStack(size);
-        outputStack = new myStack(size);
+        inputStack = new Stack(size);
+        outputStack = new Stack(size);
     }
 
     public void enqueue(int x){
@@ -22,7 +26,7 @@ public class queueWithTwoStacks {
     }
 
     public void printQueue(){
-        System.out.print("Queue: ");
+        System.out.print("DataStructures.Queue: ");
         outputStack.printStackReverse();
         inputStack.printStack();
         System.out.print("\n");

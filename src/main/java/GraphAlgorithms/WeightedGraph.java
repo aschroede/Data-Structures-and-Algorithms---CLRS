@@ -126,10 +126,10 @@ public class WeightedGraph {
     }
 
     public void FindStronglyConnectedComponents(){
-        DFS.DepthFirstSearchRecursive(this);
+        DFS.DepthFirstSearchRecursive(this, true);
         TransposeGraph();
         Collections.sort(m_Vertices);
-        DFS.DepthFirstSearchRecursive(this);
+        DFS.DepthFirstSearchRecursive(this, true);
         Map<Integer, List<Vertex>> stronglyConnectedComponents =
                 m_Vertices.stream().collect(Collectors.groupingBy(vertex -> vertex.connectedComponent));
 
@@ -144,7 +144,7 @@ public class WeightedGraph {
         }
     }
 
-    public void initializeSingleSource(int source){
+    public void InitializeSingleSource(int source){
         for(Vertex v : m_Vertices){
             v.distance = Integer.MAX_VALUE;
             v.parent = null;
@@ -153,12 +153,12 @@ public class WeightedGraph {
         m_Vertices.stream().filter(x -> x.identity == source).findFirst().get().distance=0;
     }
 
-    public void relax(Vertex u, Vertex v, int weight){
-        if(u.distance == Integer.MAX_VALUE)
+    public void relax(Edge e){
+        if(e.source.distance == Integer.MAX_VALUE)
             return;
-        if(v.distance > u.distance + weight){
-            v.distance = u.distance + weight;
-            v.parent = u;
+        if(e.destination.distance > e.source.distance + e.weight){
+            e.destination.distance = e.source.distance + e.weight;
+            e.destination.parent = e.source;
         }
     }
 }

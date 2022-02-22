@@ -1,8 +1,10 @@
+package Algorithms;
+
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.List;
 
-class activitySelector_Greedy {
+public class activitySelector_Greedy {
 
     public static int[] recursiveActivitySelector(int[] s, int[] f, int k, int n, int[] results, int resultIndex){
         int m = k+1;

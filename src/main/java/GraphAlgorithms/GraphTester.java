@@ -12,15 +12,7 @@ public class GraphTester {
 
         String filePath = SelectGraphFile();
         graph.BuildGraph(filePath);
-        BellmanFord.BellmanFord(graph, 0);
-
-
-        //DFS.DepthFirstSearchRecursive(graph);
-        //BFS.BreadthFirstSearch(graph, graph.m_Vertices.get(0));
-
-        //int numPaths = SimplePaths.SimplePaths(graph, graph.m_Vertices.get(0), graph.m_Vertices.get(11));
-        //System.out.println("Number of paths between 4 and 8: ");
-        //System.out.print(numPaths);
+        Dijkstra.Dijkstra(graph, 0);
     }
 
     private static String SelectGraphFile() {

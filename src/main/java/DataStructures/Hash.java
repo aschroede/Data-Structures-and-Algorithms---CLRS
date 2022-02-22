@@ -1,3 +1,5 @@
+package DataStructures;
+
 import java.util.Scanner;
 
 public class Hash{
@@ -6,17 +8,17 @@ public class Hash{
     {
         Scanner sc = new Scanner(System.in);
         System.out.println(
-                "***** Hash Table Implementation *****");
+                "***** DataStructures.Hash Table Implementation *****");
         System.out.println("Enter size of hash table");
 
         // create object of hash table
         HashTable table = new HashTable(sc.nextInt());
         boolean exit = false;
 
-        //  Perform HashTable operations
+        //  Perform DataStructures.HashTable operations
         while (!exit) {
             System.out.println(
-                    "** Hash Table Operations **");
+                    "** DataStructures.Hash Table Operations **");
             System.out.println("1. insert ");
             System.out.println("2. remove");
             System.out.println("3. print hash table");
@@ -58,7 +60,7 @@ public class Hash{
                 case 5:
                     table.makeEmpty();
                     System.out.println(
-                            "Hash Table Cleared Successfully..");
+                            "DataStructures.Hash Table Cleared Successfully..");
                     break;
 
                 case 6:

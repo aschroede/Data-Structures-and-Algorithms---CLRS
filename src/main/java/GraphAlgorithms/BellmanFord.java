@@ -6,11 +6,11 @@ public class BellmanFord {
 
     public static boolean BellmanFord(WeightedGraph graph, int source){
         System.out.println("\n ======= Bellman-Ford ======= ");
-        graph.initializeSingleSource(source);
+        graph.InitializeSingleSource(source);
         for (int i = 0; i < graph.m_Vertices.size()-1; i++) {
             for (ArrayList<Edge> edgeList : graph.AdjacencyList) {
                 for(Edge e : edgeList){
-                    graph.relax(e.source, e.destination, e.weight);
+                    graph.relax(e);
                 }
             }
         }

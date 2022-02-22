@@ -1,11 +1,13 @@
-public class myQueue {
+package DataStructures;
+
+public class Queue {
 
     private int [] Queue;
     public int Tail;
     private int Head;
     private int Capacity;
 
-    public myQueue(int size){
+    public Queue(int size){
         Capacity = size;
         Queue = new int[Capacity];
         Tail = 0;
@@ -15,7 +17,7 @@ public class myQueue {
     public void enqueue(int x){
 
         if(isFull()){
-            System.out.println("Queue overflow");
+            System.out.println("DataStructures.Queue overflow");
             return;
         }
 
@@ -29,7 +31,7 @@ public class myQueue {
     public int dequeue(){
 
         if(isEmpty()){
-            System.out.println("Queue underflow");
+            System.out.println("DataStructures.Queue underflow");
             return 0;
         }
 

@@ -1,3 +1,4 @@
+import Algorithms.countingSort;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
@@ -23,7 +24,7 @@ class countingSortTest {
 //        List<Integer> list = Arrays.asList(3,1,87,8);
 //        List<Integer> sortedList = Arrays.asList(1,3,8,87);
 //
-//        MyQuickSort.myQuickSort(list, 0, list.size()-1);
+//        MyQuickSort.Algorithms.myQuickSort(list, 0, list.size()-1);
 //        assertIterableEquals(sortedList, list);
 //
 //    }
@@ -33,7 +34,7 @@ class countingSortTest {
 //        List<Integer> list = Arrays.asList(0,0,0,0);
 //        List<Integer> sortedList = Arrays.asList(0,0,0,0);
 //
-//        MyQuickSort.myQuickSort(list, 0, list.size()-1);
+//        MyQuickSort.Algorithms.myQuickSort(list, 0, list.size()-1);
 //        assertIterableEquals(sortedList, list);
 //
 //    }
@@ -43,7 +44,7 @@ class countingSortTest {
 //        List<Integer> list = Arrays.asList(0,0,1,0);
 //        List<Integer> sortedList = Arrays.asList(0,0,0,1);
 //
-//        MyQuickSort.myQuickSort(list, 0, list.size()-1);
+//        MyQuickSort.Algorithms.myQuickSort(list, 0, list.size()-1);
 //        assertIterableEquals(sortedList, list);
 //
 //    }
@@ -52,7 +53,7 @@ class countingSortTest {
 //    void Test5() {
 //        List<Integer> list = Arrays.asList(2,5, 7, 23, 8, 87, 3, 2, 5, 7, 23, 8, 87, 3);
 //        List<Integer> sortedList = Arrays.asList(2, 2, 3, 3, 5, 5, 7, 7, 8, 8, 23, 23, 87, 87);
-//        MyQuickSort.myQuickSort(list, 0, list.size()-1);
+//        MyQuickSort.Algorithms.myQuickSort(list, 0, list.size()-1);
 //        assertIterableEquals(sortedList, list);
 //
 //    }
@@ -61,7 +62,7 @@ class countingSortTest {
 //    void Test6() {
 //        List<Integer> list = Arrays.asList(2,5, 0, 7, -23, 8,87,3);
 //        List<Integer> sortedList = Arrays.asList(-23, 0, 2, 3, 5, 7, 8, 87);
-//        MyQuickSort.myQuickSort(list, 0, list.size()-1);
+//        MyQuickSort.Algorithms.myQuickSort(list, 0, list.size()-1);
 //        assertIterableEquals(sortedList, list);
 //
 //    }

@@ -1,12 +1,12 @@
-import java.util.EmptyStackException;
+package DataStructures;
 
-public class myStack {
+public class Stack {
 
     public int [] m_Stack;
     public int top;
     private int size;
 
-    public myStack(int Size) {
+    public Stack(int Size) {
         size = Size;
         m_Stack = new int[size];
         top = -1;
@@ -27,7 +27,7 @@ public class myStack {
 
     public void push(int x){
         if(isFull()){
-            System.out.println("Stack overflow");
+            System.out.println("DataStructures.Stack overflow");
             return;
         }
         top += 1;
@@ -36,7 +36,7 @@ public class myStack {
 
     public int pop(){
         if (isEmpty()){
-            System.out.println("Stack underflow");
+            System.out.println("DataStructures.Stack underflow");
             return 0;
         }
 
