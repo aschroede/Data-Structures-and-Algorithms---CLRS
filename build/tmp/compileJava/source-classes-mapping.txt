@@ -13,8 +13,12 @@ GraphAlgorithms/Edge.java
  GraphAlgorithms.Edge
 DataStructures/minPriorityQueue.java
  DataStructures.minPriorityQueue
+Algorithms/activitySelector_Greedy.java
+ Algorithms.activitySelector_Greedy
 Algorithms/countingSort.java
  Algorithms.countingSort
+Algorithms/myQuickSort.java
+ Algorithms.myQuickSort
 GraphAlgorithms/graphEnums.java
  GraphAlgorithms.color
  GraphAlgorithms.edgeType
@@ -24,8 +28,9 @@ DataStructures/Hash.java
  DataStructures.HashTable$LinkedHash
 GraphAlgorithms/BellmanFord.java
  GraphAlgorithms.BellmanFord
-Algorithms/activitySelector_Greedy.java
- Algorithms.activitySelector_Greedy
+GraphAlgorithms/Dijkstra.java
+ GraphAlgorithms.Dijkstra
+ GraphAlgorithms.minPriorityVertexQueue
 Algorithms/maximumSubarray.java
  Algorithms.maximumSubarray
 GraphAlgorithms/DAGShortestPaths.java
@@ -56,8 +61,8 @@ DataStructures/stackWithTwoQueuesV1.java
 DataStructures/doublyLinkedList.java
  DataStructures.doublyLinkedList
  DataStructures.doublyLinkedList$Node
-Algorithms/myQuickSort.java
- Algorithms.myQuickSort
+GraphAlgorithms/GraphTester.java
+ GraphAlgorithms.GraphTester
 Algorithms/stackAndQueueProgram.java
  Algorithms.stackAndQueueProgram
 Algorithms/LongestCommonSubsequence.java
@@ -68,8 +73,7 @@ DataStructures/BST.java
  DataStructures.BST
  DataStructures.binarySearchTree
  DataStructures.binarySearchTree$Node
-GraphAlgorithms/Dijkstra.java
- GraphAlgorithms.Dijkstra
- GraphAlgorithms.minPriorityVertexQueue
-GraphAlgorithms/GraphTester.java
- GraphAlgorithms.GraphTester
+Algorithms/rabinKarpMatcher.java
+ Algorithms.rabinKarpMatcher
+Algorithms/AlgorithmTester.java
+ Algorithms.AlgorithmTester
