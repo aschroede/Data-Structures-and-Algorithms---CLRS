@@ -2,3 +2,8 @@
 **/build
 *.class
 *.bin
+*.xml
+*.gradle
+*.txt
+*.temp
+*.html

@@ -2,10 +2,8 @@ package Algorithms;
 
 import java.util.Collections;
 import java.util.List;
-import java.util.Stack;
 
-public class myQuickSort {
-
+public class quickSort {
 
     public static void myQuickSort(List<Integer> A, int p, int r){
         int q;
@@ -15,8 +13,6 @@ public class myQuickSort {
             myQuickSort(A, q+1, r);
         }
     }
-
-    private Stack<Integer> inbox = new Stack<Integer>();
 
     public static int partition(List<Integer> A, int p, int r){
         int x = A.get(r);

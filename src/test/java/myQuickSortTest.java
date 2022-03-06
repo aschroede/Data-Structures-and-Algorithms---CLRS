@@ -1,4 +1,4 @@
-import Algorithms.myQuickSort;
+import Algorithms.quickSort;
 import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
@@ -12,7 +12,7 @@ class myQuickSortTest {
     void Test1() {
         List<Integer> list = Arrays.asList(2,5, 7, 23, 8,87,3);
         List<Integer> sortedList = Arrays.asList(2, 3, 5, 7, 8, 23, 87);
-        myQuickSort.myQuickSort(list, 0, list.size()-1);
+        quickSort.myQuickSort(list, 0, list.size()-1);
         assertIterableEquals(sortedList, list);
 
     }
@@ -22,7 +22,7 @@ class myQuickSortTest {
         List<Integer> list = Arrays.asList(3,1,87,8);
         List<Integer> sortedList = Arrays.asList(1,3,8,87);
 
-        myQuickSort.myQuickSort(list, 0, list.size()-1);
+        quickSort.myQuickSort(list, 0, list.size()-1);
         assertIterableEquals(sortedList, list);
 
     }
@@ -32,7 +32,7 @@ class myQuickSortTest {
         List<Integer> list = Arrays.asList(0,0,0,0);
         List<Integer> sortedList = Arrays.asList(0,0,0,0);
 
-        myQuickSort.myQuickSort(list, 0, list.size()-1);
+        quickSort.myQuickSort(list, 0, list.size()-1);
         assertIterableEquals(sortedList, list);
 
     }
@@ -42,7 +42,7 @@ class myQuickSortTest {
         List<Integer> list = Arrays.asList(0,0,1,0);
         List<Integer> sortedList = Arrays.asList(0,0,0,1);
 
-        myQuickSort.myQuickSort(list, 0, list.size()-1);
+        quickSort.myQuickSort(list, 0, list.size()-1);
         assertIterableEquals(sortedList, list);
 
     }
@@ -51,7 +51,7 @@ class myQuickSortTest {
     void Test5() {
         List<Integer> list = Arrays.asList(2,5, 7, 23, 8, 87, 3, 2, 5, 7, 23, 8, 87, 3);
         List<Integer> sortedList = Arrays.asList(2, 2, 3, 3, 5, 5, 7, 7, 8, 8, 23, 23, 87, 87);
-        myQuickSort.myQuickSort(list, 0, list.size()-1);
+        quickSort.myQuickSort(list, 0, list.size()-1);
         assertIterableEquals(sortedList, list);
 
     }
@@ -60,7 +60,7 @@ class myQuickSortTest {
     void Test6() {
         List<Integer> list = Arrays.asList(2,5, 0, 7, -23, 8,87,3);
         List<Integer> sortedList = Arrays.asList(-23, 0, 2, 3, 5, 7, 8, 87);
-        myQuickSort.myQuickSort(list, 0, list.size()-1);
+        quickSort.myQuickSort(list, 0, list.size()-1);
         assertIterableEquals(sortedList, list);
 
     }
